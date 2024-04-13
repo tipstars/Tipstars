@@ -23,6 +23,7 @@ The motivation behind creating this app stems from the growing trend of seeking 
   - S3
   - CloudFront (CDN)
   - Route53
+  - SNS
 - Vault by Hashicorp
 - Jenkins
 - HAProxy
@@ -30,9 +31,9 @@ The motivation behind creating this app stems from the growing trend of seeking 
 
 ### Backend
 
-&lt;Holocron.Callout type="note"&gt;
-Ruby on Rails, GoLang, HaProxy, Jenkins Pipeline Scripts
-&lt;/Holocron.Callout&gt;
+```markdown
+**Ruby on Rails**, **GoLang**, **HaProxy**, **Jenkins Pipeline Scripts**
+```
 
 Tipstars was developed to test my infrastructure knowledge, backend capabilities, and scalability requirements. The backend of Tipstars operates within a Virtual Private Cloud (VPC) to enhance security by isolating servers from external interference. Internal servers communicate through custom private Route53 records within the VPC.
 
@@ -44,5 +45,8 @@ These microservices communicate with a PostgreSQL database cluster that can scal
 
 Both microservices leverage Ruby on Rail's user-friendly features and excellent Object-Relational Mapping (ORM), making them popular among startups. They implement JWT cookie-based authentication to track users across each microservice while maintaining isolation to perform their specific functions. Communication between the microservices only occurs when necessary, following the microservices principle.
 
-![](https://holocron.so/uploads/128b6c33-image.png)
+There are GoLang Lambda jobs that run every 5 minutes to update game data if there is no user traffic refreshing it. These tasks ensure that sports information, particularly for games that haven't been settled yet, is updated periodically. Platforms like FanDuel and DraftKings expire their game data 12 hours after an event finishes. The event data can be updated either through user traffic or by running these GoLang jobs.
 
+GoLang was chosen over Node.js for these Lambda functions as a new challenge, reduce fees with AWS, and benefit from performance gains and faster cold start times.
+
+![](https://holocron.so/uploads/128b6c33-image.png)
