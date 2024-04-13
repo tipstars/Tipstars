@@ -32,7 +32,7 @@ The motivation behind creating this app stems from the growing trend of seeking 
 ### Backend
 
 ```markdown
-**Ruby on Rails**, **GoLang**, **HaProxy**, **Jenkins Pipeline Scripts**
+Ruby on Rails, GoLang, HaProxy, Jenkins Pipeline Scripts
 ```
 
 Tipstars was developed to test my infrastructure knowledge, backend capabilities, and scalability requirements. The backend of Tipstars operates within a Virtual Private Cloud (VPC) to enhance security by isolating servers from external interference. Internal servers communicate through custom private Route53 records within the VPC.
