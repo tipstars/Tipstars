@@ -24,10 +24,12 @@ The motivation behind creating this app stems from the growing trend of seeking 
   - CloudFront (CDN)
   - Route53
   - SNS
+  - Lambda
 - Vault by Hashicorp
 - Jenkins
 - HAProxy
-- Lambda
+- React Native
+- CodePush
 
 ### Backend
 
