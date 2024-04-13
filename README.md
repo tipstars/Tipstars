@@ -1,0 +1,2 @@
+# Tipstars
+Tipstars Project
